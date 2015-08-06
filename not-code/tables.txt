@@ -1,0 +1,48 @@
+---------------------------------------
+m_users 
+---------------------------------------
+id (int)
+base_id (int)
+email (varchar)
+password_hash (varchar)
+created_at (datetime)
+updated_at (datetime)
+
+---------------------------------------
+m_users_locations 
+---------------------------------------
+id (int)
+user_id (int) [null]
+base_id (int)
+device_id (varchar)
+user_market_id (varchar)
+lat (spatial)
+lon (spatial)
+created_at (datetime)
+updated_at (datetime)
+
+---------------------------------------
+m_users_form_data
+---------------------------------------
+id (int)
+user_id (int)
+base_id (int)
+form_name (varchar)
+data_guid (uuid) - (*) 
+data_key (varchar)
+data_value (varchar)
+created_at (datetime)
+updated_at (datetime)
+
+* - в запросе пост будет массив key/value - это поле одинаково для группы в одном запросе 
+
+---------------------------------------
+m_users_app_start
+---------------------------------------
+id (int)
+user_id (int) [null]
+base_id (int)
+device_id (varchar)
+user_market_id (varchar)
+created_at (datetime)
+updated_at (datetime)

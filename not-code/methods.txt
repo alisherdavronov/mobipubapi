@@ -1,0 +1,74 @@
+POST 	/{version}/mobile_user/auth/
+
+Request 
+
+{ 
+	mobile_user_email: mobile_user_email, 
+	mobile_user_pass: mobile_user_pass,
+	base_id: base_id
+}
+
+Response 
+{
+	mobile_user_id:	mobile_user_id,
+	mobile_user_email: mobile_user_email,
+	mobile_user_guid: mobile_user_guid,
+	last_logged_in: last_logged_in
+
+}
+
+
+POST 	/{version}/mobile_user/set_geo_position/
+
+Request 
+{ 
+	base_id: base_id, 
+	lat: lat, 
+	lon: lon,
+	device_id: device_id,
+	market_id: market_id,
+	mobile_user_id: mobile_user_id *  
+}
+
+Response 
+{
+	result: ok,
+	error: error
+}
+
+
+POST 	/{version}/mobile_user/set_from_data/
+
+Request 
+
+{ 
+	base_id: base_id, 
+	mobile_user_id: mobile_user_id, 
+	form_name: form_name, 
+	data:[ 
+		{ key: key, value: value}, ...
+	     ] 
+}
+
+Response 
+{
+	result: ok,
+	error: error
+}
+
+
+POST 	/{version}/mobile_user/start_app/
+
+Request 
+{ 
+	base_id: base_id, 
+	device_id: device_id,
+	market_id: market_id,
+	mobile_user_id: mobile_user_id *  
+}
+
+Response 
+{
+	result: ok,
+	error: error
+}

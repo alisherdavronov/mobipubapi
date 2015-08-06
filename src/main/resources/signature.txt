@@ -1,0 +1,18 @@
+GET 	/{version}/bases/{base_id}
+
+GET 	/{version}/bases/{base_id}/categories_count
+GET 	/{version}/bases/{base_id}/categories/{offset}/{limit}
+GET 	/{version}/categories/{category_id}
+
+GET 	/{version}/categories/{category_id}/contents_count
+GET 	/{version}/categories/{category_id}/contents/{offset}/{limit}
+GET 	/{version}/contents/{content_id}
+
+GET 	/{version}/contents/{content_id}/content_attributes
+GET 	/{version}/contents/{content_id}/content_elements
+
+POST 	/{version}/mobile_user/auth/{ user_auth : { base_id: "", email: "", pass: "" } }
+
+POST 	/{version}/mobile_user/set_geo_position/{ base_id: "", user_id: "",  lat: "", lon: "" }
+POST 	/{version}/mobile_user/set_from_data/{ base_id: "", user_id: "", form_name: "", data:[ {key: key, value: value}, ...] }
+POST 	/{version}/mobile_user/start_app/{ base_id: "", user_id: "" }
